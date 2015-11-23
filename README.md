@@ -13,9 +13,13 @@ Config this gem using following command
 
     SidekiqRemoveScheduled::Redis.config(host: 'localhost', port: '6379')
 
+You can also add a logger.
+
+  SidekiqRemoveScheduled::Logger.set(Rails.logger) # You can pass any logger object
+
 Then bind this gem with your sidekiq
 
-    SidekiqRemoveScheduled.bind
+    SidekiqRemoveScheduled.bind # Run this command after all configuration
 
 
 ## Usage
