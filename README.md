@@ -1,5 +1,7 @@
 # SidekiqRemoveScheduled
 
+[![Gem Version](https://badge.fury.io/rb/sidekiq_remove_scheduled.svg)](https://badge.fury.io/rb/sidekiq_remove_scheduled)
+
 This gem help to remove sidekiq scheduled jobs by maintaining all job ids. Just pass the arguments and this gem will take care of it.
 
 
