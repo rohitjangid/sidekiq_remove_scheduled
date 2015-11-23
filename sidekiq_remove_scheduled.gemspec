@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.require_paths = ["lib"]
   spec.files         = Dir["{lib}/**/*"] + ["Rakefile"]
-  spec.add_dependency 'redis', '~>3.2'
-  spec.add_dependency 'redis-namespace', '~> 1.5'
-  spec.add_dependency 'sidekiq', '~> 3.4'
+  spec.add_dependency 'redis'
+  spec.add_dependency 'redis-namespace'
+  spec.add_dependency 'sidekiq'
 end
