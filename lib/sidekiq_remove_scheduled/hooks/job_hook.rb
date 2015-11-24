@@ -32,8 +32,8 @@ module SidekiqRemoveScheduled
               begin
                 job = ::SidekiqRemoveScheduled::Redis.client.zscan('schedule', itterator, match: pattern)
                 itterator = job.first.to_i
-              end until job.last.present? || itterator == 0
-              ::SidekiqRemoveScheduled::Redis.client.zrem('schedule', job.last.first) if job.last.present?
+              end until job.last.count != 0 || itterator == 0
+              ::SidekiqRemoveScheduled::Redis.client.zrem('schedule', job.last.first) if job.last.count != 0
             end
             ::SidekiqRemoveScheduled::Redis.job_queue.del(field)
           end
