@@ -1,3 +1,9 @@
+#
+# This class require all files and include hooks in sidekiq modules
+#
+# @author [Rohit Jangid]
+#
+
 require 'sidekiq'
 require 'celluloid'
 require 'sidekiq/processor'

@@ -1,9 +1,18 @@
+#
+# This module is responsible for clearing redis queue after job is done performing
+#
+# @author [Rohit Jangid]
+#
 module SidekiqRemoveScheduled
   module Hooks
     module ProcessHook
       def self.included(base)
         execute_job_hook base
       end
+      #
+      # This method is responsible for extending execute_job method
+      # It search current job in redis queue and remove it from job_queue key
+      #
       def self.execute_job_hook(base)
         default_execute_job = base.instance_method(:execute_job)
         base.send :define_method, :execute_job do |worker, args|
