@@ -1,3 +1,8 @@
+#
+# This module config the logger and maintain all logging methods
+#
+# @author [rohit]
+#
 module SidekiqRemoveScheduled
   module Logger
     class << self

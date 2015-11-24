@@ -1,3 +1,8 @@
+#
+# This module contain all redis configuration and client
+#
+# @author [Rohit Jangid]
+#
 module SidekiqRemoveScheduled
   module Redis
     class << self
