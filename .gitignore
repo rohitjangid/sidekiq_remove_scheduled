@@ -1,1 +1,2 @@
 sidekiq_remove_scheduled-*.gem
+Gemfile.lock
