@@ -1,5 +1,5 @@
 require 'sidekiq'
-require 'celluloid'
+require 'celluloid/current'
 class TestWorker
   include Sidekiq::Worker
   def perform(name)
