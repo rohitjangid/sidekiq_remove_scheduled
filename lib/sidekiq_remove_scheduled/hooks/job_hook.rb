@@ -28,6 +28,8 @@ module SidekiqRemoveScheduled
             jobs = ::SidekiqRemoveScheduled::Redis.job_queue.get(field).to_s.split(',')
             jobs << jid
             ::SidekiqRemoveScheduled::Redis.job_queue.set(field, jobs.uniq.join(','))
+
+            jid
           end
           base::ClassMethods.send :alias_method, :perform_at, :perform_in
         end
