@@ -5,7 +5,6 @@
 #
 
 require 'sidekiq'
-require 'celluloid/current'
 require 'sidekiq/processor'
 require 'sidekiq_remove_scheduled/logger'
 require 'sidekiq_remove_scheduled/hooks/job_hook'
