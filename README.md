@@ -2,8 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/sidekiq_remove_scheduled.svg)](https://badge.fury.io/rb/sidekiq_remove_scheduled)
 
-This gem help to remove sidekiq scheduled jobs by maintaining all job ids. Just pass the arguments and this gem will take care of it.
-
+Inspired from [Resque Scheduler](https://github.com/resque/resque-scheduler), this gem is an extension for sidekiq to remove scheduled jobs. It maintains all the job ids internally. To remove any job, you can do it with the same arguments used to schedule them.
 
 ## Installation
 
@@ -17,7 +16,7 @@ Config this gem using following command
 
 You can also add a logger.
 
-  SidekiqRemoveScheduled::Logger.set(Rails.logger) # You can pass any logger object
+    SidekiqRemoveScheduled::Logger.set(Rails.logger) # You can pass any logger object
 
 Then bind this gem with your sidekiq
 
